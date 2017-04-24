@@ -1,0 +1,35 @@
+lerna(info)    Lerna v2.0.0-rc.3
+lerna(verbose) GitUtilities.isInitialized    ("/Users/bstatman/neat-testing/lerna-repo")
+lerna(verbose) GitUtilities.isInitialized    ("/Users/bstatman/neat-testing/lerna-repo") => true
+lerna(verbose) FileSystemUtilities.existsSync("/Users/bstatman/neat-testing/lerna-repo/VERSION")
+lerna(verbose) FileSystemUtilities.existsSync("/Users/bstatman/neat-testing/lerna-repo/VERSION") => false
+lerna(verbose) Attempting running PublishCommand.initialize
+lerna(info)    Current version: 0.0.0
+lerna(info)    Checking for updated packages...
+lerna(verbose) GitUtilities.hasTags          ({"cwd":"/Users/bstatman/neat-testing/lerna-repo"})
+lerna(verbose) GitUtilities.hasTags          ({"cwd":"/Users/bstatman/neat-testing/lerna-repo"}) => false
+lerna(info)    No tags found! Comparing with initial commit.
+lerna(info)    Changes:
+lerna(info)    - package-a: 1.0.0 => 1.0.0
+- package-b: 1.0.0 => 1.0.0
+lerna(verbose) Successfully ran PublishCommand.initialize
+lerna(verbose) Attempting running PublishCommand.execute
+lerna(verbose) GitUtilities.isDetachedHead   ({"cwd":"/Users/bstatman/neat-testing/lerna-repo"})
+lerna(verbose) GitUtilities.getCurrentBranch ({"cwd":"/Users/bstatman/neat-testing/lerna-repo"})
+lerna(error)   GitUtilities.getCurrentBranch ({"cwd":"/Users/bstatman/neat-testing/lerna-repo"})
+    Error: fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
+    Use '--' to separate paths from revisions, like this:
+    'git <command> [<revision>...] -- [<file>...]'
+    
+        at Function.module.exports.sync (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:277:26)
+        at Function.execSync (/usr/local/lib/node_modules/lerna/lib/ChildProcessUtilities.js:50:30)
+        at getCurrentBranch (/usr/local/lib/node_modules/lerna/lib/GitUtilities.js:158:46)
+        at Function.descriptor.value (/usr/local/lib/node_modules/lerna/lib/logger.js:146:33)
+        at isDetachedHead (/usr/local/lib/node_modules/lerna/lib/GitUtilities.js:67:37)
+        at Function.descriptor.value (/usr/local/lib/node_modules/lerna/lib/logger.js:146:33)
+        at PublishCommand.execute (/usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:238:55)
+        at PublishCommand._attempt (/usr/local/lib/node_modules/lerna/lib/Command.js:249:21)
+        at /usr/local/lib/node_modules/lerna/lib/Command.js:234:15
+        at /usr/local/lib/node_modules/lerna/lib/Command.js:258:13
+lerna(error)   GitUtilities.isDetachedHead   ({"cwd":"/Users/bstatman/neat-testing/lerna-repo"})
+lerna(error)   Errored while running PublishCommand.execute
